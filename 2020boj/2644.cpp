@@ -7,15 +7,16 @@ int ar[101][101];
 int dist[101];
 int main() {
     int n;
-    cin >> n;
     int a, b;
-    cin >> a >> b;
     int m;
+    cin >> n;
+    cin >> a >> b;
     cin >> m;
     for (int i = 0; i < m; i++) {
         int x, y;
         cin >> x >> y;
-        ar[x][y] = ar[y][x] = 1;
+        ar[x][y] = 1;
+        ar[y][x] = 1;
     }
     queue<int> q;
     q.push(a);
@@ -31,7 +32,7 @@ int main() {
         }
     }
     if (dist[b] == 0) {
-        cout << 0;
+        cout << -1;
     } else {
         cout << dist[b];
     }
