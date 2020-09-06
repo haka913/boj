@@ -6,29 +6,6 @@ using namespace std;
 int n, k;
 int dist[100001];
 
-// void bfs(int n) {
-//     queue<int> q;
-//     q.push(n);
-//     int result = 0;
-//     int cnt = 0;
-//     while (!cnt) {
-//         int size = q.size();
-//         while (size--) {
-//             int p = q.front();
-//             q.pop();
-//             if (p == k) cnt += 1;
-//             int ar[] = {p - 1, p + 1, 2 * p};
-//             for (int i = 0; i < 3; i++) {
-//                 if (ar[i] < 0 || ar[i] > 100000) continue;
-//                 if (dist[ar[i]] && dist[ar[i]] != dist[p] + 1) continue;
-//                 q.push(ar[i]);
-//                 dist[ar[i]] = dist[p] + 1;
-//             }
-//         }
-//         result += 1;
-//     }
-//     cout << result - 1 << endl << cnt;
-// }
 int result = 999999;
 int cnt = 0;
 void bfs() {
